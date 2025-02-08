@@ -8,9 +8,9 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         .container { max-width: 1200px; margin: auto; padding: 20px; text-align: center; background: white; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); border-radius: 10px; }
         header { background: linear-gradient(90deg, #007bff, #00d4ff); color: white; padding: 20px; font-size: 24px; font-weight: bold; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; }
-        .privacy-link { font-size: 16px; }
-        .privacy-link a { color: white; text-decoration: none; }
-        .privacy-link a:hover { text-decoration: underline; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: white; text-decoration: none; font-size: 16px; }
+        .nav-links a:hover { text-decoration: underline; }
         .content { padding: 20px; }
         h1 { color: #333; font-size: 32px; margin-bottom: 10px; }
         p { font-size: 18px; color: #666; margin-bottom: 20px; line-height: 1.6; }
@@ -29,13 +29,15 @@
         .privacy { margin-top: 20px; font-size: 16px; }
         .privacy a { color: #007bff; text-decoration: none; }
         .privacy a:hover { text-decoration: underline; }
+        section { padding: 20px; margin-top: 20px; background: #f9f9f9; border-radius: 10px; }
     </style>
 </head>
 <body>
     <header>
         ChitApp - Manage Your Chit Investments Easily
-        <div class="privacy-link">
+        <div class="nav-links">
             <a href="privacypolicy.html" target="_blank">Privacy Policy</a>
+            <a href="#contact">Contact Us</a>
         </div>
     </header>
     <div class="container">
@@ -68,5 +70,14 @@
             </div>
         </div>
     </div>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, feel free to reach out to us:</p>
+        <ul>
+            <li>Email: <a href="mailto:velu.p.samy@gmail.com">velu.p.samy@gmail.com</a></li>
+        </ul>
+    </section>
 </body>
 </html>
