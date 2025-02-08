@@ -23,7 +23,7 @@
         .feature-box:nth-child(5n) { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
         .feature-box:nth-child(6n) { background: linear-gradient(135deg, #cc2b5e, #753a88); }
         .feature-box:hover { transform: translateY(-10px); }
-        .slideshow-container { position: relative; max-width: 600px; margin: auto; }
+        .slideshow-container { position: relative; max-width: 1000px; margin: auto; }
         .slides { display: none; }
         .slides img { width: 100%; border-radius: 10px; }
         .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
@@ -47,7 +47,7 @@
     <div class="container">
         <div class="content">
             <h1>Welcome to ChitApp</h1>
-            <p>ChitApp is your ultimate companion for managing all your chit-fund investments seamlessly. With ChitApp, you can effortlessly strategize, monitor, and analyze your investments. Our app provides estimated calculations, monthly and annual fund insights, and secure data backup via Google Drive. ChitApp ensures you have all the tools you need to make informed decisions and keep track of your investments with ease.</p>
+            <p>ChitApp is your comprehensive solution for managing all your chit-fund investments in one place. It helps you strategize, monitor, and analyze your investments with ease. With features like estimated calculations, monthly and annual fund insights, and data backup via Google Drive, ChitApp ensures you have all the tools you need to make informed decisions and keep track of your investments effortlessly.</p>
             <h2>Key Features</h2>
             <div class="features">
                 <div class="feature-box">Strategize your chit investments well in advance.</div>
@@ -84,7 +84,19 @@
                     <img src="images/8.png" alt="Screenshot 8">
                 </div>
                 <div class="slides">
-                    <img src="images/9.png" alt class="dot" onclick="currentSlide(7)"></span>
+                    <img src="images/9.png" alt="Screenshot 9">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
                 <span class="dot" onclick="currentSlide(8)"></span>
                 <span class="dot" onclick="currentSlide(9)"></span>
             </div>
@@ -104,7 +116,6 @@
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
-
         function showSlides() {
             let i;
             let slides = document.getElementsByClassName("slides");
