@@ -23,15 +23,9 @@
         .feature-box:nth-child(5n) { background: linear-gradient(135deg, #43cea2, #185a9d); }
         .feature-box:nth-child(6n) { background: linear-gradient(135deg, #6a11cb, #2575fc); }
         .feature-box:hover { transform: translateY(-10px); }
-        .slideshow-container { position: relative; max-width: 400px; margin: auto; }
-        .slides { display: none; }
-        .slides img { width: 100%; border-radius: 10px; }
-        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
-        .next { right: 0; border-radius: 3px 0 0 3px; }
-        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-        .dot-container { text-align: center; padding: 20px; background: #ddd; border-radius: 10px; }
-        .dot { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
-        .active, .dot:hover { background-color: #717171; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 20px; }
+        .gallery img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
         .privacy { margin-top: 20px; font-size: 16px; }
         .privacy a { color: #007bff; text-decoration: none; }
         .privacy a:hover { text-decoration: underline; }
@@ -58,81 +52,21 @@
                 <div class="feature-box">Track overdue chits easily.</div>
             </div>
             <h2>Gallery</h2>
-            <div class="slideshow-container">
-                <div class="slides">
-                    <img src="images/1.png" alt="Screenshot 1">
-                </div>
-                <div class="slides">
-                    <img src="images/2.png" alt="Screenshot 2">
-                </div>
-                <div class="slides">
-                    <img src="images/3.png" alt="Screenshot 3">
-                </div>
-                <div class="slides">
-                    <img src="images/4.png" alt="Screenshot 4">
-                </div>
-                <div class="slides">
-                    <img src="images/5.png" alt="Screenshot 5">
-                </div>
-                <div class="slides">
-                    <img src="images/6.png" alt="Screenshot 6">
-                </div>
-                <div class="slides">
-                    <img src="images/7.png" alt="Screenshot 7">
-                </div>
-                <div class="slides">
-                    <img src="images/8.png" alt="Screenshot 8">
-                </div>
-                <div class="slides">
-                    <img src="images/9.png" alt="Screenshot 9">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
+            <div class="gallery">
+                <img src="images/1.png" alt="Screenshot 1">
+                <img src="images/2.png" alt="Screenshot 2">
+                <img src="images/3.png" alt="Screenshot 3">
+                <img src="images/4.png" alt="Screenshot 4">
+                <img src="images/5.png" alt="Screenshot 5">
+                <img src="images/6.png" alt="Screenshot 6">
+                <img src="images/7.png" alt="Screenshot 7">
+                <img src="images/8.png" alt="Screenshot 8">
+                <img src="images/9.png" alt="Screenshot 9">
             </div>
             <div class="privacy">
                 <p><a href="https://www.freeprivacypolicy.com/live/e2ba549c-b5b6-4e42-90d9-eacd223faaa6" target="_blank">Privacy Policy</a></p>
             </div>
         </div>
     </div>
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("slides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
 </body>
 </html>
