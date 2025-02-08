@@ -23,7 +23,7 @@
         .feature-box:nth-child(5n) { background: linear-gradient(135deg, #43cea2, #185a9d); }
         .feature-box:nth-child(6n) { background: linear-gradient(135deg, #6a11cb, #2575fc); }
         .feature-box:hover { transform: translateY(-10px); }
-        .slideshow-container { position: relative; max-width: 600px; margin: auto; }
+        .slideshow-container { position: relative; max-width: 400px; margin: auto; }
         .slides { display: none; }
         .slides img { width: 100%; border-radius: 10px; }
         .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
@@ -116,6 +116,7 @@
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
+
         function showSlides() {
             let i;
             let slides = document.getElementsByClassName("slides");
