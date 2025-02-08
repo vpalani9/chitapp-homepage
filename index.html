@@ -5,133 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChitApp - Monitor Your Chit Investments</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        .container { max-width: 1200px; margin: auto; padding: 20px; text-align: center; background: white; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); border-radius: 10px; }
-        header { background: linear-gradient(90deg, #007bff, #00d4ff); color: white; padding: 20px; font-size: 24px; font-weight: bold; border-radius: 10px 10px 0 0; display: flex; justify-content: space-between; align-items: center; }
-        .privacy-link { font-size: 16px; }
-        .privacy-link a { color: white; text-decoration: none; }
-        .privacy-link a:hover { text-decoration: underline; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; text-align: center; background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px; }
+        header { background: linear-gradient(90deg, #007bff, #00d4ff); color: white; padding: 20px; font-size: 24px; font-weight: bold; border-radius: 10px 10px 0 0; }
         .content { padding: 20px; }
         h1 { color: #333; font-size: 32px; margin-bottom: 10px; }
-        p { font-size: 18px; color: #666; margin-bottom: 20px; line-height: 1.6; }
-        h2 { color: #007bff; font-size: 24px; margin-bottom: 20px; }
+        p { font-size: 18px; color: #444; line-height: 1.6; max-width: 900px; margin: auto; text-align: justify; }
         .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .feature-box { width: 30%; padding: 20px; background: linear-gradient(135deg, #ff7e5f, #feb47b); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s; color: white; }
-        .feature-box:nth-child(2n) { background: linear-gradient(135deg, #6a11cb, #2575fc); }
-        .feature-box:nth-child(3n) { background: linear-gradient(135deg, #43cea2, #185a9d); }
-        .feature-box:nth-child(4n) { background: linear-gradient(135deg, #ffafbd, #ffc3a0); }
-        .feature-box:nth-child(5n) { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
-        .feature-box:nth-child(6n) { background: linear-gradient(135deg, #cc2b5e, #753a88); }
-        .feature-box:hover { transform: translateY(-10px); }
-        .slideshow-container { position: relative; max-width: 1000px; margin: auto; }
-        .slides { display: none; }
-        .slides img { width: 100%; border-radius: 10px; }
-        .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; }
-        .next { right: 0; border-radius: 3px 0 0 3px; }
-        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-        .dot-container { text-align: center; padding: 20px; background: #ddd; border-radius: 10px; }
-        .dot { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
-        .active, .dot:hover { background-color: #717171; }
+        .feature-box { width: 30%; padding: 15px; background: linear-gradient(135deg, #ff7e5f, #feb47b); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px; color: white; font-size: 16px; font-weight: bold; text-align: center; }
+        .gallery-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; }
+        .gallery-container img { width: 250px; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s; }
+        .gallery-container img:hover { transform: scale(1.1); }
         .privacy { margin-top: 20px; font-size: 16px; }
         .privacy a { color: #007bff; text-decoration: none; }
         .privacy a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <header>
-        ChitApp - Manage Your Chit Investments Easily
-        <div class="privacy-link">
-            <a href="https://www.freeprivacypolicy.com/live/e2ba549c-b5b6-4e42-90d9-eacd223faaa6" target="_blank">Privacy Policy</a>
-        </div>
-    </header>
+    <header>ChitApp - Manage Your Chit Investments Easily</header>
     <div class="container">
         <div class="content">
             <h1>Welcome to ChitApp</h1>
-            <p>ChitApp is your comprehensive solution for managing all your chit-fund investments in one place. It helps you strategize, monitor, and analyze your investments with ease. With features like estimated calculations, monthly and annual fund insights, and data backup via Google Drive, ChitApp ensures you have all the tools you need to make informed decisions and keep track of your investments effortlessly.</p>
+            <p>ChitApp is your all-in-one solution for managing chit-fund investments effortlessly. Strategize in advance, track your monthly and yearly fund requirements, and gain financial insights to optimize your investments.</p>
             <h2>Key Features</h2>
             <div class="features">
-                <div class="feature-box">Strategize your chit investments well in advance.</div>
-                <div class="feature-box">Get estimated calculations for better decision-making.</div>
-                <div class="feature-box">Track monthly fund requirements and yearly closures.</div>
+                <div class="feature-box">Plan your chit investments well ahead.</div>
+                <div class="feature-box">Receive estimated calculations for informed decisions.</div>
+                <div class="feature-box">Monitor monthly fund requirements and yearly closures.</div>
                 <div class="feature-box">Backup and restore data with Google Drive integration.</div>
-                <div class="feature-box">Use pending view to prevent oversights.</div>
-                <div class="feature-box">Track overdue chits easily.</div>
+                <div class="feature-box">Avoid missing entries with the pending view.</div>
+                <div class="feature-box">Track overdue chits seamlessly.</div>
             </div>
             <h2>Gallery</h2>
-            <div class="slideshow-container">
-                <div class="slides">
-                    <img src="images/1.png" alt="Screenshot 1">
-                </div>
-                <div class="slides">
-                    <img src="images/2.png" alt="Screenshot 2">
-                </div>
-                <div class="slides">
-                    <img src="images/3.png" alt="Screenshot 3">
-                </div>
-                <div class="slides">
-                    <img src="images/4.png" alt="Screenshot 4">
-                </div>
-                <div class="slides">
-                    <img src="images/5.png" alt="Screenshot 5">
-                </div>
-                <div class="slides">
-                    <img src="images/6.png" alt="Screenshot 6">
-                </div>
-                <div class="slides">
-                    <img src="images/7.png" alt="Screenshot 7">
-                </div>
-                <div class="slides">
-                    <img src="images/8.png" alt="Screenshot 8">
-                </div>
-                <div class="slides">
-                    <img src="images/9.png" alt="Screenshot 9">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
+            <div class="gallery-container">
+                <img src="images/1.png" alt="Screenshot 1">
+                <img src="images/2.png" alt="Screenshot 2">
+                <img src="images/3.png" alt="Screenshot 3">
+                <img src="images/4.png" alt="Screenshot 4">
+                <img src="images/5.png" alt="Screenshot 5">
+                <img src="images/6.png" alt="Screenshot 6">
+                <img src="images/7.png" alt="Screenshot 7">
+                <img src="images/8.png" alt="Screenshot 8">
+                <img src="images/9.png" alt="Screenshot 9">
             </div>
             <div class="privacy">
                 <p><a href="https://www.freeprivacypolicy.com/live/e2ba549c-b5b6-4e42-90d9-eacd223faaa6" target="_blank">Privacy Policy</a></p>
             </div>
         </div>
     </div>
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("slides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
 </body>
 </html>
